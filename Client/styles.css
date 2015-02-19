@@ -1,0 +1,25 @@
+.show {
+
+  display: block;
+}
+
+.hide {
+  display: none;
+
+}
+
+ .userPup {
+
+  display: none;
+}
+
+
+/* #createPup {
+
+  display: none;
+} */
+
+.dogPound {
+
+  display: none;
+}
