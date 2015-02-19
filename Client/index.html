@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yorkiepoos are Adorbs!</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="html/templatex" id="pupTmpl">
+
+    <h2><%= name %></h2>
+
+    <img src='<%= photo %>'>
+    <p><%= breed %></p>
+    <p><%= disposition %></p>
+
+    <button class="delete">Delete</button>
+    <button class="like">Like</button>
+    <button class="dislike">Dislike</button>
+
+</head>
+</script>
+<body>
+
+
+  <div class="logs">
+  <button class="signup">Signup</button>
+  <button class="login">Login</button>
+  </div>
+  <section>
+<div class="userPup">
+  <form action="" id="createPup">
+    <p><input type="text" name="newName" placeholder="Name"></p>
+    <p><input type="text" name="newPhoto" placeholder="Photo"></p>
+    <p><textarea name="newBreed" id="" cols="30" rows="10" placeholder="Breed"></textarea></p>
+
+    <p><input type="text" name="newDisposition" placeholder="Disposition"></p>
+    <p><button class="createUser" type="createNewAccount">Create New Account</button></p>
+  </form>
+</div>
+
+<div class="dogPound"></div>
+
+</section>
+
+
+
+
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+
+  <!-- app files -->
+  <script src="router.js"></script>
+  <script src="model.js"></script>
+  <script src="collection.js"></script>
+  <script src="views.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
