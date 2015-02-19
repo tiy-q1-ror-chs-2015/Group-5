@@ -27,5 +27,7 @@ module Server
       allow do
         origins '*'
         resource '*', headers: :any, methods: [:get, :post, :put, :delete]
+      end
+    end
   end
 end
