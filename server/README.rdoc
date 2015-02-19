@@ -26,3 +26,50 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+task users: :environment do
+
+    # User.each(&:delete_all)
+
+    User.new 20 do |user|
+      user.name = Faker::Name.name
+      user.password = "password"
+      user.password_confirmation = "password"
+      user.breed = ["Dalmatian", 
+        "Yorkipoo", 
+        "Corgi", 
+        "French Bulldog", 
+        "Shiba Inu", 
+        "Labrador", 
+        "Greyhound", 
+        "Shitzu", 
+        "Mixed/Other",
+        "German Shepherd",
+        "Golden Retreiver",
+        "Beagle",
+        "Poodle",
+        "Dachshund",
+        "Siberian Husky",
+        "Rottweiler",
+        "Chihuahua",
+        "Boxer",
+        "Spaniel",
+        "Great Dane"
+      ]
+      user.age = 20.years.ago..1.years.ago
+      user.gender = ["male", "female"]
+      user.photo = ["none"]
+      user.disposition = [
+        "Sweet",
+        "Calm",
+        "Excitable",
+        "Indoorsy",
+        "Outdoorsy",
+        "A real asshole"
+      ]
+      user.email = Faker::Internet.email
+    end
+    user.save
+    user.confirm!
+  end
+end

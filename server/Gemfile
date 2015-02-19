@@ -4,6 +4,8 @@ gem 'devise'
 gem 'rack-cors'
 gem 'haml-rails'
 gem 'quiet_assets'
+gem 'populator'
+gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
