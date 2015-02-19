@@ -25,7 +25,7 @@ task create_dogs: :environment do
         "Spaniel",
         "Great Dane"
       ].sample,
-      age: 20.years.ago..1.years.ago,
+      age: "#{rand(1..20)} years",
       gender: ["male", "female"].sample,
       photo: ["none"],
       disposition: [
