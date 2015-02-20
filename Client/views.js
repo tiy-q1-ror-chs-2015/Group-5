@@ -12,7 +12,9 @@ var PupView = Backbone.View.extend ({
 
   events: {
     "click .delete": "removePup",
-    "click .singleDog": ""
+  //  "click .singleDog": "",
+    "click .like": "thumbsUp",
+    "click .dislike": "thumbsDown"
 
   },
 
@@ -29,8 +31,18 @@ var PupView = Backbone.View.extend ({
     this.$el.remove();
     this.model.destroy();
 
-  }
+  },
 
+  thumbsUp: function () {
+    console.log("thumbsup button works!");
+    ///add a dog print or smiley face or something////
+
+  },
+
+  thumbsDown: function () {
+    console.log("thumbsdown button works!")
+
+  },
 
 
 });
@@ -52,7 +64,8 @@ var Appview = Backbone.View.extend({
     "click .signup": "showCreate",
     "click .createUser": "createPup",
     "click .login": "loginForm",
-    "click .moreDogs": "dogPound"
+    "click .moreDogs": "dogPound",
+
 
 
   },
@@ -126,7 +139,7 @@ dogPound: function () {
   $(".dogPound").show();
   $(".dogProfile").hide();
 
-}
+},
 
 
 
