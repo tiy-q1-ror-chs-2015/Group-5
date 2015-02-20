@@ -36,12 +36,16 @@ var PupView = Backbone.View.extend ({
   thumbsUp: function () {
     console.log("thumbsup button works!");
     ///add a dog print or smiley face or something////
-
+    this.$(".dogpaw").addClass("inline");
+    likedDogs.push(this.model);
   },
 
   thumbsDown: function () {
     console.log("thumbsdown button works!")
 
+    ///add a dog print or sad face or something////
+    this.$(".sadface").show();
+    dislikedDogs.push(this.model);
   },
 
 

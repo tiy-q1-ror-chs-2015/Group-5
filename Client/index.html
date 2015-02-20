@@ -7,7 +7,7 @@
   <script type="html/templatex" id="pupTmpl">
 <div class ="dogPound">
     <h2><%= name %></h2>
-    <img src='<%= photo %>'>
+    <img class="dogPhoto" src='<%= photo %>'>
     <p><%= breed %></p>
     <p><%= disposition %></p>
 
@@ -15,6 +15,9 @@
     <button class="like">Like</button>
     <button class="dislike">Dislike</button>
     <button class="singleDog">More about dog?</button>
+    <img class="dogpaw" src="images/dogpaw.jpg" alt="">
+    <img class="sadface" src="images/sadface.ico" alt="">
+
     </div>
 </head>
 </script>
@@ -66,6 +69,7 @@
   <script src="bower_components/backbone/backbone.js"></script>
 
   <!-- app files -->
+  <script src="data.js"></script>
   <script src="router.js"></script>
   <script src="model.js"></script>
   <script src="collection.js"></script>
