@@ -1,7 +1,7 @@
 class DogsController < ApplicationController
   def index
     @dogs = Dog.all
-    respond_to do |format|
+    respond_to do |format|  
       format.json { render json: @dogs.to_json }
     end
   end
