@@ -5,18 +5,22 @@ var AppRouter = Backbone.Router.extend ({
   },
 
   routes: {
-    ""    : "home",
+  //  "dogs"    : "home",
     "home": "home",
-    "test": "testRouter",
-    "" : "home", //// This will be the opening page
-    "dogs": "dogDisplay"
+    //"test": "testRouter",
+    "" : "home", //// This will be the login page
+    "dogs": "dogPound",
+    "dogs/:id": "dogProfile"
   },
 
   home: function () {
+    console.log("home works!")
+    var self= this;
     var pupCollection = new PupCollection();
 
    pupCollection.fetch().then(function () {
      var appView = new Appview({collection: pupCollection});
+     self.loadView(appView);
    });
 
 
@@ -26,6 +30,18 @@ var AppRouter = Backbone.Router.extend ({
 
 
   },
+
+  dogProfile: function () {
+    console.log("dogProfile works!");
+
+
+  },
+
+  loadView: function(view){
+    this.view && this.view.remove();
+    this.view = view;
+
+  }
 
   // testRouter: function () {
   //   var testRoute = this.loadView(new testView());
@@ -40,15 +56,15 @@ var AppRouter = Backbone.Router.extend ({
   //
   // },
 
-  dogDisplay: function () {
-    var pupCollection = new PupCollection();
-
-   pupCollection.fetch().then(function () {
-     var appView = new Appview({collection: pupCollection});
-   });
-
-
-  }
+  // dogPound: function () {
+  //   var pupCollection = new PupCollection();
+  //
+  //  pupCollection.fetch().then(function () {
+  //    var appView = new Appview({collection: pupCollection});
+  //  });
+  //
+  //
+  // }
 
 
 });
