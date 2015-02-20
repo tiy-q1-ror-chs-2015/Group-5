@@ -44,6 +44,9 @@ class DogsController < ApplicationController
     end
   end
 
+  def show
+    @dog = Dog.find params[:id]
+  end
 
   def destroy
     @dog = Dog.find params[:id]
