@@ -46,6 +46,8 @@ class DogsController < ApplicationController
 
   def show
     @dog = Dog.find params[:id]
+    respond_to do |format|
+      format.json { render json: @dog.to_json }
   end
 
   def destroy
