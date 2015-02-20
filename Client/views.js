@@ -4,7 +4,7 @@
 
 var PupView = Backbone.View.extend ({
   template: _.template($('#pupTmpl').html()),
-  tagName: 'section',
+  tagName: 'article',
   initialize: function () {
     console.log("A pup view!")
 
@@ -12,6 +12,7 @@ var PupView = Backbone.View.extend ({
 
   events: {
     "click .delete": "removePup",
+    "click .singleDog": ""
 
   },
 
@@ -38,7 +39,7 @@ var PupView = Backbone.View.extend ({
 ///COLLECTION VIEW
 
 var Appview = Backbone.View.extend({
-  el: $('section'),
+  el: $('body'),
   initialize: function () {
     console.log('app view initialized!');
   this.addAllPups();
@@ -50,6 +51,8 @@ var Appview = Backbone.View.extend({
   events: {
     "click .signup": "showCreate",
     "click .createUser": "createPup",
+    "click .login": "loginForm",
+    "click .moreDogs": "dogPound"
 
 
   },
@@ -58,7 +61,7 @@ var Appview = Backbone.View.extend({
 /// SIGNUP///
 createPup: function (event) {
   event.preventDefault();
-
+ console.log("create new dog account button works!")
 ///PUT IN PUP'S INFO///
   var newPup = {
     name: $('#createPup').find('input[name="newName"]').val(),
@@ -73,14 +76,16 @@ createPup: function (event) {
   this.addOnePup(newModelPup);
   this.$el.find('#createPup').find('input, textarea').val('');
   this.showCreate();
-
+  $(".dogPound").show();
+  $(".userPup").hide();
+  $(".logs").hide();
 
 },
 
 
 /// ENABLES YOU TO TOGGLE CREATE PUP FORM TO SHOW OR HIDE////
 showCreate: function () {
-
+event.preventDefault();
   console.log("signup button works");
   //this.$el.find('#createPup').toggleClass('show');
   $(".logs").toggleClass('hide');
@@ -100,7 +105,36 @@ addAllPups: function () {
   _.each(this.collection.models, this.addOnePup, this);
 },
 
+loginForm: function (event) {
+  event.preventDefault();
+
+// NOT SURE IF THIS IS HOW TO DO THIS
+// var userDog = {
+//   name: $('.loginForm').find('input[name="username"]').val(),
+//   username: $('.loginForm').find('input[name="password"]').val(),
+//
+// };
+// var userModelPup =  PupModel(userDog);
+//
+// }
+  $(".logs").hide();
+  $(".dogProfile").show();
+},
+
+dogPound: function () {
+  console.log("dogPound button works!");
+  $(".dogPound").show();
+  $(".dogProfile").hide();
+
+}
+
+
+
+
 });
+
+
+
 
 ///TEST VIEW////
 // var testView = Backbone.View.extend ({
@@ -120,7 +154,7 @@ addAllPups: function () {
 //
 //   tagName: 'section',
 //   initialize: function () {
-//     console.log("A pup view!")
+//     console.log("Signup view!")
 //
 //   },
 
