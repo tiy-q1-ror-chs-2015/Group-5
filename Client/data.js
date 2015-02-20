@@ -1,0 +1,3 @@
+likedDogs =[]
+
+dislikedDogs = []

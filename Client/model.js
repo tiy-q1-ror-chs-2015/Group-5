@@ -4,7 +4,7 @@ var PupModel = Backbone.Model.extend ({
   idAttribute: '_id',
   defaults: {
     name: "Pookie",
-    photo: 'images/booboo.jpg',
+    photo: 'dogs/boxer.jpg',
     breed: "Yorkipoo",
     disposition: "sweet",
 

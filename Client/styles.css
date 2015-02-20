@@ -28,3 +28,24 @@
   display: none;
 
 }
+
+.dogpaw {
+  display: none;
+  width: 45px;
+
+}
+
+.dogPhoto {
+  width: 100px;
+
+}
+
+.inline {
+
+  display: inline-block;
+}
+
+.sadface {
+  display: none;
+  width: 45px;
+}
