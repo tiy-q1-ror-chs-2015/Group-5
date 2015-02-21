@@ -1,0 +1,61 @@
+video {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  min-width: 1045px;
+}
+
+
+.show {
+
+  display: block;
+}
+
+.hide {
+  display: none;
+
+}
+
+ .userPup {
+
+  display: none;
+}
+
+
+/* #createPup {
+
+  display: none;
+} */
+
+.dogPound {
+
+  display: none;
+}
+
+.dogProfile {
+  display: none;
+
+}
+
+.dogpaw {
+  display: none;
+  width: 45px;
+
+}
+
+.dogPhoto {
+  width: 100px;
+
+}
+
+.inline {
+
+  display: inline-block;
+}
+
+.sadface {
+  display: none;
+  width: 45px;
+}
