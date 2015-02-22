@@ -1,0 +1,69 @@
+video {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  min-width: 1045px;
+}
+
+.row {
+  color:white;
+}
+
+ul.inline-list.right1 a {
+  color: white;
+  font-size: 14px;
+  text-transform: none;
+  float: right;
+}
+
+
+.show {
+
+  display: block;
+}
+
+.hide {
+  display: none;
+
+}
+
+ .userPup {
+
+  display: none;
+}
+
+
+.dogPound {
+
+  display: none;
+  position: relative;
+  margin-left: 25%;
+}
+
+.dogProfile {
+  display: none;
+
+}
+
+.dogpaw {
+  display: none;
+  width: 45px;
+
+}
+
+.dogPhoto {
+  width: 300px;
+
+}
+
+.inline {
+
+  display: inline-block;
+}
+
+.sadface {
+  display: none;
+  width: 45px;
+}
