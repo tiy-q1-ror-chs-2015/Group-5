@@ -125,6 +125,7 @@ addAllPups: function () {
 loginForm: function (event) {
   event.preventDefault();
 
+
 // NOT SURE IF THIS IS HOW TO DO THIS
 // var userDog = {
 //   name: $('.loginForm').find('input[name="username"]').val(),
@@ -136,6 +137,8 @@ loginForm: function (event) {
 // }
   $(".logs").hide();
   $(".dogProfile").show();
+  $(".hideintouch").hide();
+  $(".hidefooter").hide();
 },
 
 dogPound: function () {

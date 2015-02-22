@@ -25,7 +25,9 @@ ul.inline-list.right1 a {
   display: none; }
 
 .dogPound {
-  display: none; }
+  display: none;
+  position: relative;
+  margin-left: 25%; }
 
 .dogProfile {
   display: none; }
@@ -35,7 +37,7 @@ ul.inline-list.right1 a {
   width: 45px; }
 
 .dogPhoto {
-  width: 100px; }
+  width: 300px; }
 
 .inline {
   display: inline-block; }
