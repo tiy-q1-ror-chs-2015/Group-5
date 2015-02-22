@@ -12,7 +12,7 @@ var PupView = Backbone.View.extend ({
 
   events: {
     "click .delete": "removePup",
-  //  "click .singleDog": "",
+  //  "click .singleDog": "moreAboutDog",
     "click .like": "thumbsUp",
     "click .dislike": "thumbsDown"
 
@@ -47,6 +47,19 @@ var PupView = Backbone.View.extend ({
     this.$(".sadface").show();
     dislikedDogs.push(this.model);
   },
+
+ //  moreAboutDog: function () {
+ //    console.log("more about dog button works!");
+ //    tagName: 'section',
+ //    template: _.template($('#pupTmpl').html()),
+ //    initialize: function() {
+ //   this.render();
+ //   $('.container').html(this.el);
+ //
+ // },
+ //
+ //
+ //  }
 
 
 });
