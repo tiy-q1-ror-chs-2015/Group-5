@@ -10,7 +10,7 @@ var AppRouter = Backbone.Router.extend ({
     //"test": "testRouter",
     "" : "home", //// This will be the login page
     "/dogs": "home",
-    "dogs/:id": "dogProfile"
+  //  "dogs/id": "dogProfile"
   },
 
   home: function () {
@@ -33,7 +33,7 @@ var AppRouter = Backbone.Router.extend ({
 
   dogProfile: function () {
     console.log("dogProfile works!");
-
+    // this.loadView(new dogProfileView());
 
   },
 

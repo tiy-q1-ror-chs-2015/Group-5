@@ -12,7 +12,7 @@ var PupView = Backbone.View.extend ({
 
   events: {
     "click .delete": "removePup",
-  //  "click .singleDog": "",
+  "click .singleDog": "moreAboutDog",
     "click .like": "thumbsUp",
     "click .dislike": "thumbsDown"
 
@@ -37,7 +37,11 @@ var PupView = Backbone.View.extend ({
     console.log("thumbsup button works!");
     ///add a dog print or smiley face or something////
     this.$(".dogpaw").addClass("inline");
+    this.model.toJSON();
     likedDogs.push(this.model);
+
+    console.log(this.model)
+  //  $(".likedDogz").append($(likedDogs));
   },
 
   thumbsDown: function () {
@@ -47,6 +51,24 @@ var PupView = Backbone.View.extend ({
     this.$(".sadface").show();
     dislikedDogs.push(this.model);
   },
+
+  moreAboutDog: function () {
+    console.log("more about dog button works!");
+
+   this.$(".dogPhoto").addClass("bigger");
+   this.$(".moreinfo").show();
+
+
+ },
+ //
+ // likedDogz: function () {
+ //   console.log("likedDogz works!");
+ //
+ //
+ // }
+ //
+
+
 
 
 });
@@ -69,6 +91,7 @@ var Appview = Backbone.View.extend({
     "click .createUser": "createPup",
     "click .login": "loginForm",
     "click .moreDogs": "dogPound",
+    "click. .likedList": "likedList"
 
 
 
@@ -149,6 +172,28 @@ dogPound: function () {
 },
 
 
+likedList: function () {
+  event.preventDefault();
+  // console.log("liked list button works!");
+  //var finalTmpl = _.template($('#pupTmpl').html());
+ var html = "";
+ //(likedDogs).toJSON();
+  console.log(likedDogs);
+//   _.each(likedDogs, function (currentItem){
+//
+//    html += finalTmpl(currentItem);
+// });
+
+// var markup = finalTmpl(likedDogs).toJSON());
+// (".likedDogs").html(markup);
+
+
+//liked
+
+$("body").html(likedDogs);
+ console.log(html);
+
+}
 
 
 });

@@ -1,3 +1,3 @@
-likedDogs =[]
+var likedDogs =[]
 
-dislikedDogs = []
+var dislikedDogs = []
